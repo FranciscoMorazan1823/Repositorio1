@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29527E</color>
+    <color name="colorPrimaryDark">#244A74</color>
+    <color name="colorAccent">#D6A622</color>
+    <color name="bacground">#E3E3E3</color>
+    <color name="Darkbacground">#BCBCBC</color>
+    <color name="darkgray">#5C5C5C</color>
+    <color name="skyblue">#70F6F2</color>
+    <color name="green">#58FC50</color>
+    <color name="facebookColor">#0048FB</color>
+    <color name="googleColor">#FF6E00</color>
+    <color name="general_blue">#29527E</color>
+    <color name="red">#F00404</color>
+    <color name="item_back_color">#A8A8AC</color>
+
+</resources>

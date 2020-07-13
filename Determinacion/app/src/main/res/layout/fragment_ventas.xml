@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/darkgray"
+    tools:context=".ventasFragment"
+    android:orientation="vertical"
+ >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:itemBackground="@color/general_blue"
+        app:itemIconTint="@color/bacground"
+        app:itemTextColor="@color/bacground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="277dp"
+        android:layout_height="69dp"
+        android:background="@color/colorAccent"
+        android:drawableRight="@drawable/ic_agenda"
+        android:paddingRight="16dp"
+        android:text="Pagos"
+        android:textColor="@color/bacground"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="248dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="277dp"
+        android:layout_height="69dp"
+        android:background="@color/colorAccent"
+        android:drawableRight="@drawable/ic_factura"
+        android:paddingRight="16dp"
+        android:text="Factura"
+        android:textColor="@color/bacground"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="394dp"
+        tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

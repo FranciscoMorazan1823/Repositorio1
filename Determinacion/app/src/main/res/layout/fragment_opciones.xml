@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="@color/darkgray"
+    android:orientation="vertical"
+ >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment_opciones">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:itemBackground="@color/general_blue"
+        app:itemIconTint="@color/bacground"
+        app:itemTextColor="@color/bacground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opciones"
+        android:textColor="@color/bacground"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="268dp"
+        android:layout_height="58dp"
+        android:text="Avisos y alertas"
+        android:textColor="@color/bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="229dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="282dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="crear backup"
+        android:textColor="@color/bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="282dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="descargar backup"
+        android:textColor="@color/bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="282dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:text="soporte"
+        android:textColor="@color/bacground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:drawableRight="@drawable/ic_soporte"
+        android:paddingRight="16dp"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:text="Google"
+        android:textColor="@color/bacground"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="586dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/facebookColor"
+        android:text="Facebook"
+        android:textColor="@color/bacground"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="586dp"
+        tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

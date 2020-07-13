@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".facturaFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fragment_factura"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkgray"
+    >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/button_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:itemBackground="@color/general_blue"
+        app:itemIconTint="@color/bacground"
+        app:itemTextColor="@color/bacground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/recordatorio_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_back_color"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <EditText
+        android:id="@+id/recordatorio_input"
+        android:layout_width="6dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:hint=" Agregar una Factura"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recordatorio_bar"
+        app:layout_constraintStart_toStartOf="@+id/recordatorio_bar"
+        app:layout_constraintTop_toTopOf="@+id/recordatorio_bar" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="52dp"
+        android:layout_height="61dp"
+        app:srcCompat="@drawable/ic_add_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/recordatorio_bar"
+        app:layout_constraintEnd_toEndOf="@+id/recordatorio_bar"
+        app:layout_constraintStart_toEndOf="@+id/recordatorio_input"
+        app:layout_constraintTop_toTopOf="@+id/recordatorio_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
