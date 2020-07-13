@@ -39,7 +39,7 @@ abstract class NoteDatabase : RoomDatabase() {
             val noteDao = db.noteDao()
             subscribeOnBackground {
                 noteDao.insert(Note("Producto 1", "001", 34, 13.25,25.99 ,))
-                noteDao.insert(Note("Producto 2", "002", 25,4.00,7.00))
+                noteDao.insert(Note("Producto 2", "002", 25,4.0,7.00))
                 noteDao.insert(Note("Producto 3", "003", 12,23.99, 34.67))
 
             }

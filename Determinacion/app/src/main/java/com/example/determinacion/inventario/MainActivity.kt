@@ -75,9 +75,12 @@ class MainActivity : AppCompatActivity() {
         adapter = NoteAdapter { clickedNote ->
             val intent = Intent(this, AddEditNoteActivity::class.java)
             intent.putExtra(EXTRA_ID, clickedNote.id)
-            intent.putExtra(EXTRA_TITLE, clickedNote.title)
-            intent.putExtra(EXTRA_DESCRIPTION, clickedNote.description)
-            intent.putExtra(EXTRA_PRIORITY, clickedNote.priority)
+            intent.putExtra(EXTRA_NAME, clickedNote.name)
+            intent.putExtra(EXTRA_CODE, clickedNote.code)
+            intent.putExtra(EXTRA_STOCK, clickedNote.stock)
+            intent.putExtra(EXTRA_COMPRA, clickedNote.precioCompra)
+            intent.putExtra(EXTRA_VENTA, clickedNote.precioVenta)
+
             startActivityForResult(intent, EDIT_NOTE_REQUEST)
         }
         recycler_view.adapter = adapter
@@ -86,11 +89,15 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(data != null && requestCode == ADD_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
-            val title: String = data.getStringExtra(EXTRA_TITLE)
-            val description: String =
-                data.getStringExtra(EXTRA_DESCRIPTION)
-            val priority: Int = data.getIntExtra(EXTRA_PRIORITY, -1)
-            vm.insert(Note(title, description, priority))
+            val name: String = data.getStringExtra(EXTRA_NAME)
+            val code: String =
+                data.getStringExtra(EXTRA_CODE)
+
+            val stock: Int = data.getStringExtra(EXTRA_STOCK)
+            val precioCompra: Float = data.getStringExtra(EXTRA_COMPRA)
+            val precioVenta: Float = data.getStringExtra(EXTRA_VENTA)
+
+            vm.insert(Note(name, code, stock ,precioCompra,precioVenta))
             Toast.makeText(this, "Note inserted!", Toast.LENGTH_SHORT).show()
 
         } else if(data != null && requestCode == EDIT_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
@@ -99,12 +106,15 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Note couldn't be updated!", Toast.LENGTH_SHORT).show()
                 return
             }
-            val title: SString = data.getStringExtra(EXTRA_TITLE)
-            val title: SString = data.getStringExtra(EXTRA_TITLE)
-            val description: String =
-                data.getStringExtra(EXTRA_DESCRIPTION)
-            val priority: Int = data.getIntExtra(EXTRA_PRIORITY, -1)
-            vm.update(Note(title, description, priority, id))
+            val name: String = data.getStringExtra(EXTRA_NAME)
+            val code: String =
+                data.getStringExtra(EXTRA_CODE)
+
+            val stock: Int = data.getStringExtra(EXTRA_STOCK)
+            val precioCompra: Float = data.getStringExtra(EXTRA_COMPRA)
+            val precioVenta: Float = data.getStringExtra(EXTRA_VENTA)
+
+            vm.update(Note(name, code, stock ,precioCompra,precioVenta))
             Toast.makeText(this, "Note updated!", Toast.LENGTH_SHORT).show()
 
         } else {
